@@ -39,4 +39,78 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
+
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Navigation
+
+let nav = document.querySelector("nav");
+
+nav.children[0].textContent = siteContent.nav["nav-item-1"];
+nav.children[1].textContent = siteContent.nav["nav-item-2"];
+nav.children[2].textContent = siteContent.nav["nav-item-3"];
+nav.children[3].textContent = siteContent.nav["nav-item-4"];
+nav.children[4].textContent = siteContent.nav["nav-item-5"];
+nav.children[5].textContent = siteContent.nav["nav-item-6"];
+
+nav.children[0].style.color = "green";
+nav.children[1].style.color = "green";
+nav.children[2].style.color = "green";
+nav.children[3].style.color = "green";
+nav.children[4].style.color = "green";
+nav.children[5].style.color = "green";
+
+let newitem1 = document.createElement("a");
+newitem1.textContent = "Yes";
+nav.appendChild(newitem1);
+nav.children[6].style.color = "green";
+
+let newitem2 = document.createElement("a");
+newitem2.textContent = "No";
+nav.prepend(newitem2);
+nav.children[0].style.color = "green";
+
+
+//CTA
+
+let ctaText = document.querySelector(".cta-text");
+let ctaImg = document.querySelector("#cta-img");
+
+ctaText.children[0].textContent = siteContent.cta["h1"];
+ctaText.children[1].textContent = siteContent.cta["button"];
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+
+
+//Main Content
+
+let mainContent = document.querySelector(".main-content");
+let topContent = document.querySelector(".main-content .top-content");
+let botContent = document.querySelector(".main-content .bottom-content");
+
+mainContent.children[0].children[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+topContent.querySelector(".text-content p").textContent = siteContent["main-content"]["features-content"]; //better than just stringing togeting .children? - querySelector will select only the first child with that selection
+topContent.children[1].querySelector("h4").textContent = siteContent["main-content"]["about-h4"];
+topContent.children[1].querySelector("p").textContent = siteContent["main-content"]["about-content"];
+mainContent.querySelector("#middle-img").setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+botContent.children[0].querySelector("h4").textContent = siteContent["main-content"]["services-h4"];
+botContent.children[0].querySelector("p").textContent = siteContent["main-content"]["services-content"];
+botContent.children[1].querySelector("h4").textContent = siteContent["main-content"]["product-h4"];
+botContent.children[1].querySelector("p").textContent = siteContent["main-content"]["product-content"];
+botContent.children[2].querySelector("h4").textContent = siteContent["main-content"]["vision-h4"];
+botContent.children[2].querySelector("p").textContent = siteContent["main-content"]["vision-content"];
+
+//Contact
+
+let contact = document.querySelector(".contact");
+
+contact.children[0].textContent = siteContent["contact"]["contact-h4"];
+contact.children[1].textContent = siteContent["contact"]["address"];
+contact.children[2].textContent = siteContent["contact"]["phone"];
+contact.children[3].textContent = siteContent["contact"]["email"];
+
+//Footer
+
+let footer = document.querySelector("footer");
+
+footer.children[0].textContent = siteContent["footer"]["copyright"];
