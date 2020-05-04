@@ -39,11 +39,13 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
+
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Navigation
 
 let navServices = document.querySelector("nav");
+
 navServices.children[0].textContent = siteContent.nav["nav-item-1"];
 navServices.children[1].textContent = siteContent.nav["nav-item-2"];
 navServices.children[2].textContent = siteContent.nav["nav-item-3"];
@@ -55,6 +57,7 @@ navServices.children[5].textContent = siteContent.nav["nav-item-6"];
 
 let ctaText = document.querySelector(".cta-text");
 let ctaImg = document.querySelector("#cta-img");
+
 ctaText.children[0].textContent = siteContent.cta["h1"];
 ctaText.children[1].textContent = siteContent.cta["button"];
 ctaImg.setAttribute("src", siteContent.cta["img-src"]);
@@ -65,6 +68,7 @@ ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 let mainContent = document.querySelector(".main-content");
 let topContent = document.querySelector(".main-content .top-content");
 let botContent = document.querySelector(".main-content .bottom-content");
+
 mainContent.children[0].children[0].children[0].textContent = siteContent["main-content"]["features-h4"]
 topContent.querySelector(".text-content p").textContent = siteContent["main-content"]["features-content"]; //better than just stringing togeting .children? - querySelector will select only the first child with that selection
 topContent.children[1].querySelector("h4").textContent = siteContent["main-content"]["about-h4"];
@@ -81,7 +85,14 @@ botContent.children[2].querySelector("p").textContent = siteContent["main-conten
 //Contact
 
 let contact = document.querySelector(".contact");
+
 contact.children[0].textContent = siteContent["contact"]["contact-h4"];
 contact.children[1].textContent = siteContent["contact"]["address"];
 contact.children[2].textContent = siteContent["contact"]["phone"];
 contact.children[3].textContent = siteContent["contact"]["email"];
+
+//Footer
+
+let footer = document.querySelector("footer");
+
+footer.children[0].textContent = siteContent["footer"]["copyright"];
