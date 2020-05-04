@@ -53,6 +53,13 @@ navServices.children[3].textContent = siteContent.nav["nav-item-4"];
 navServices.children[4].textContent = siteContent.nav["nav-item-5"];
 navServices.children[5].textContent = siteContent.nav["nav-item-6"];
 
+navServices.children[0].style.color = "green";
+navServices.children[1].style.color = "green";
+navServices.children[2].style.color = "green";
+navServices.children[3].style.color = "green";
+navServices.children[4].style.color = "green";
+navServices.children[5].style.color = "green";
+
 //CTA
 
 let ctaText = document.querySelector(".cta-text");
