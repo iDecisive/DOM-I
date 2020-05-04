@@ -44,21 +44,32 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Navigation
 
-let navServices = document.querySelector("nav");
+let nav = document.querySelector("nav");
 
-navServices.children[0].textContent = siteContent.nav["nav-item-1"];
-navServices.children[1].textContent = siteContent.nav["nav-item-2"];
-navServices.children[2].textContent = siteContent.nav["nav-item-3"];
-navServices.children[3].textContent = siteContent.nav["nav-item-4"];
-navServices.children[4].textContent = siteContent.nav["nav-item-5"];
-navServices.children[5].textContent = siteContent.nav["nav-item-6"];
+nav.children[0].textContent = siteContent.nav["nav-item-1"];
+nav.children[1].textContent = siteContent.nav["nav-item-2"];
+nav.children[2].textContent = siteContent.nav["nav-item-3"];
+nav.children[3].textContent = siteContent.nav["nav-item-4"];
+nav.children[4].textContent = siteContent.nav["nav-item-5"];
+nav.children[5].textContent = siteContent.nav["nav-item-6"];
 
-navServices.children[0].style.color = "green";
-navServices.children[1].style.color = "green";
-navServices.children[2].style.color = "green";
-navServices.children[3].style.color = "green";
-navServices.children[4].style.color = "green";
-navServices.children[5].style.color = "green";
+nav.children[0].style.color = "green";
+nav.children[1].style.color = "green";
+nav.children[2].style.color = "green";
+nav.children[3].style.color = "green";
+nav.children[4].style.color = "green";
+nav.children[5].style.color = "green";
+
+let newitem1 = document.createElement("a");
+newitem1.textContent = "Yes";
+nav.appendChild(newitem1);
+nav.children[6].style.color = "green";
+
+let newitem2 = document.createElement("a");
+newitem2.textContent = "No";
+nav.prepend(newitem2);
+nav.children[0].style.color = "green";
+
 
 //CTA
 
