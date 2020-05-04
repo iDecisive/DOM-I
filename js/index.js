@@ -66,7 +66,7 @@ let mainContent = document.querySelector(".main-content");
 let topContent = document.querySelector(".main-content .top-content");
 let botContent = document.querySelector(".main-content .bottom-content");
 mainContent.children[0].children[0].children[0].textContent = siteContent["main-content"]["features-h4"]
-topContent.querySelector(".text-content p").textContent = siteContent["main-content"]["features-content"]; //better than just stringing togeting .children - querySelector will select only the first child with that selection
+topContent.querySelector(".text-content p").textContent = siteContent["main-content"]["features-content"]; //better than just stringing togeting .children? - querySelector will select only the first child with that selection
 topContent.children[1].querySelector("h4").textContent = siteContent["main-content"]["about-h4"];
 topContent.children[1].querySelector("p").textContent = siteContent["main-content"]["about-content"];
 mainContent.querySelector("#middle-img").setAttribute("src", siteContent["main-content"]["middle-img-src"]);
@@ -77,3 +77,11 @@ botContent.children[1].querySelector("h4").textContent = siteContent["main-conte
 botContent.children[1].querySelector("p").textContent = siteContent["main-content"]["product-content"];
 botContent.children[2].querySelector("h4").textContent = siteContent["main-content"]["vision-h4"];
 botContent.children[2].querySelector("p").textContent = siteContent["main-content"]["vision-content"];
+
+//Contact
+
+let contact = document.querySelector(".contact");
+contact.children[0].textContent = siteContent["contact"]["contact-h4"];
+contact.children[1].textContent = siteContent["contact"]["address"];
+contact.children[2].textContent = siteContent["contact"]["phone"];
+contact.children[3].textContent = siteContent["contact"]["email"];
